@@ -93,15 +93,17 @@ public class CodeGen extends IRElementVisitorWithArgument<CODE> {
 
 	@Override
 	public CODE visitStatement(MJIf e, CODE code) throws VisitorException {
-		//TODO lav lortet
+		//TODO kontroller om dette er korrekt
 		code.comment(" IF ");
-		code.commentline(" condition ");
+		code.commentline(" get the ifBlock ");
+		visitStatement(e.getIfBlock(), code);
+		code.pop(CODE.TMP0);
+		code.commentline(" get the condition ");
 		visitExpression(e.getCondition(), code);
-		code.commentline(" statement block ");
-		visitExpression(e.getIfBlock(), code);
-//		if(){
-//			
-//		}
+		if(e.getCondition().equals(true)){
+			code.commentline(" do ifBlock ");
+			code.push(CODE.TMP0);
+		}
 		
 		code.comment(" IF END ");
 
@@ -110,8 +112,23 @@ public class CodeGen extends IRElementVisitorWithArgument<CODE> {
 
 	@Override
 	public CODE visitStatement(MJIfElse e, CODE code) throws VisitorException {
-		//TODO lav lortet
+		//TODO kontroller om dette er korrekt
 		code.comment(" IF/ELSE ");
+		code.commentline(" get the ifBlock ");
+		visitStatement(e.getIfBlock(), code);
+		code.commentline(" get the elseBlock ");
+		visitStatement(e.getElseBlock(), code);
+		code.pop2(CODE.TMP0, CODE.TMP1);
+		code.commentline(" get the condition ");
+		visitExpression(e.getCondition(), code);
+		if(e.getCondition().equals(true)){
+			code.commentline(" do ifBlock ");
+			code.push(CODE.TMP0);
+		}
+		else {
+			code.commentline(" do elseBlock ");
+			code.push(CODE.TMP1);
+		}
 		code.comment(" IF/ELSE END ");
 
 		return null;
@@ -119,8 +136,18 @@ public class CodeGen extends IRElementVisitorWithArgument<CODE> {
 
 	@Override
 	public CODE visitStatement(MJWhile e, CODE code) throws VisitorException {
-		//TODO lav lortet
+		//TODO kontroller om dette er korrekt
 		code.comment(" WHILE BEGIN ");
+		code.commentline(" get the Block ");
+		visitStatement(e.getBlock(), code);
+		code.pop(CODE.TMP0);
+		code.commentline(" get the condition ");
+		visitExpression(e.getCondition(), code);
+		if(e.getCondition().equals(true)){
+			code.commentline(" do Block ");
+			code.push(CODE.TMP0);
+		}
+		
 		code.comment(" WHILE END");
 
 		return null;
@@ -412,7 +439,7 @@ public class CodeGen extends IRElementVisitorWithArgument<CODE> {
 
 	@Override
 	public CODE visitExpression(MJMinus e, CODE code) throws VisitorException {
-		//TODO lav lortet
+		//TODO kontroller om dette er korrekt
 		code.comment(" MINUS BEGIN ");
 		code.commentline(" lhs ");
 		visitExpression(e.getLhs(), code);
@@ -421,7 +448,7 @@ public class CodeGen extends IRElementVisitorWithArgument<CODE> {
 		code.commentline(" subtract integers ");
 		code.pop2( CODE.TMP0, CODE.TMP1);
 		code.add( new LC3NOT(CODE.TMP1, CODE.TMP1));
-		code.add( new LC3ADD(CODE.TMP1, CODE.TMP1, 1)); //TODO kontroller om lortet skal gøres således
+		code.add( new LC3ADD(CODE.TMP1, CODE.TMP1, 1)); //TODO skal denne linje være der, da det er en integer? 
 		code.add( new LC3ADD(CODE.TMP0, CODE.TMP0, CODE.TMP1));
 		code.push( CODE.TMP0 );
 		
@@ -465,7 +492,7 @@ public class CodeGen extends IRElementVisitorWithArgument<CODE> {
 
 	@Override
 	public CODE visitExpression(MJNegate e, CODE code) throws VisitorException {
-		//TODO lav lortet
+		//TODO Negate burde være korrekt
 		code.comment(" NEGATE BEGIN ");
 		code.commentline(" argument ");
 		visitExpression(e.getArgument(), code);
@@ -1484,6 +1511,7 @@ public class CodeGen extends IRElementVisitorWithArgument<CODE> {
 		}
 	}
 	
+	@SuppressWarnings("unchecked")
 	private void assignMethodOffsetsHelper(MJClass c, HashSet<MJClass> visited) {
 
 		int slot=0;
