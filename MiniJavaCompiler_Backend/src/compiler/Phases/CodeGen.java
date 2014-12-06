@@ -93,7 +93,7 @@ public class CodeGen extends IRElementVisitorWithArgument<CODE> {
 
 	@Override
 	public CODE visitStatement(MJIf e, CODE code) throws VisitorException {
-
+		//TODO lav lortet
 		code.comment(" IF ");
 		code.comment(" IF END ");
 
@@ -102,6 +102,7 @@ public class CodeGen extends IRElementVisitorWithArgument<CODE> {
 
 	@Override
 	public CODE visitStatement(MJIfElse e, CODE code) throws VisitorException {
+		//TODO lav lortet
 		code.comment(" IF/ELSE ");
 		code.comment(" IF/ELSE END ");
 
@@ -110,6 +111,7 @@ public class CodeGen extends IRElementVisitorWithArgument<CODE> {
 
 	@Override
 	public CODE visitStatement(MJWhile e, CODE code) throws VisitorException {
+		//TODO lav lortet
 		code.comment(" WHILE BEGIN ");
 		code.comment(" WHILE END");
 
@@ -402,6 +404,7 @@ public class CodeGen extends IRElementVisitorWithArgument<CODE> {
 
 	@Override
 	public CODE visitExpression(MJMinus e, CODE code) throws VisitorException {
+		//TODO lav lortet
 		code.comment(" MINUS BEGIN ");
 		code.comment(" MINUS END ");
 		return null;
@@ -443,6 +446,7 @@ public class CodeGen extends IRElementVisitorWithArgument<CODE> {
 
 	@Override
 	public CODE visitExpression(MJNegate e, CODE code) throws VisitorException {
+		//TODO lav lortet
 		code.comment(" NEGATE BEGIN ");
 		code.comment(" NEGATE END ");
 		return null;
