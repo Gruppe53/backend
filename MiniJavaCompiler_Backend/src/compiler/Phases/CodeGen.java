@@ -95,6 +95,14 @@ public class CodeGen extends IRElementVisitorWithArgument<CODE> {
 	public CODE visitStatement(MJIf e, CODE code) throws VisitorException {
 		//TODO lav lortet
 		code.comment(" IF ");
+		code.commentline(" condition ");
+		visitExpression(e.getCondition(), code);
+		code.commentline(" statement block ");
+		visitExpression(e.getIfBlock(), code);
+//		if(){
+//			
+//		}
+		
 		code.comment(" IF END ");
 
 		return null;
@@ -406,6 +414,17 @@ public class CodeGen extends IRElementVisitorWithArgument<CODE> {
 	public CODE visitExpression(MJMinus e, CODE code) throws VisitorException {
 		//TODO lav lortet
 		code.comment(" MINUS BEGIN ");
+		code.commentline(" lhs ");
+		visitExpression(e.getLhs(), code);
+		code.commentline(" rhs ");
+		visitExpression(e.getRhs(), code);
+		code.commentline(" subtract integers ");
+		code.pop2( CODE.TMP0, CODE.TMP1);
+		code.add( new LC3NOT(CODE.TMP1, CODE.TMP1));
+		code.add( new LC3ADD(CODE.TMP1, CODE.TMP1, 1)); //TODO kontroller om lortet skal gøres således
+		code.add( new LC3ADD(CODE.TMP0, CODE.TMP0, CODE.TMP1));
+		code.push( CODE.TMP0 );
+		
 		code.comment(" MINUS END ");
 		return null;
 	}
@@ -448,6 +467,13 @@ public class CodeGen extends IRElementVisitorWithArgument<CODE> {
 	public CODE visitExpression(MJNegate e, CODE code) throws VisitorException {
 		//TODO lav lortet
 		code.comment(" NEGATE BEGIN ");
+		code.commentline(" argument ");
+		visitExpression(e.getArgument(), code);
+		code.commentline(" negate ");
+		code.pop(CODE.TMP0);
+		code.add( new LC3NOT(CODE.TMP0, CODE.TMP0) );
+		code.push(CODE.TMP0);
+		
 		code.comment(" NEGATE END ");
 		return null;
 	}
@@ -478,7 +504,7 @@ public class CodeGen extends IRElementVisitorWithArgument<CODE> {
 		code.add( new LC3STR(CODE.TMP1, CODE.TMP0, 0));
 		code.push(CODE.TMP0);
 		code.commentline(" new HP is address, is on stack");
-
+		
 		code.comment(" NEW END ");
 		return null;
 	}
