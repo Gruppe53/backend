@@ -344,77 +344,156 @@
                                                             </java.lang.String>
                                                         </name>
                                                     </compiler.IR.MJVariable>
+                                                    <compiler.IR.MJVariable id=37>
+                                                        <type>
+                                                            <compiler.IR.MJType id=11>
+                                                                IS ALREADY SERIALIZED
+                                                            </compiler.IR.MJType>
+                                                        </type>
+                                                        <name>
+                                                            <java.lang.String id=38>
+                                                                a
+                                                            </java.lang.String>
+                                                        </name>
+                                                    </compiler.IR.MJVariable>
                                                 </java.util.LinkedList>
                                             </variables>
                                             <statements>
-                                                <java.util.LinkedList id=37>
-                                                    <compiler.IR.MJAssign id=38>
+                                                <java.util.LinkedList id=39>
+                                                    <compiler.IR.MJAssign id=40>
                                                         <rhs>
-                                                            <compiler.IR.MJInteger id=39>
+                                                            <compiler.IR.MJBoolean id=41>
                                                                 <value>
-                                                                    <java.lang.Integer id=40>
+                                                                    <compiler.IR.MJBoolean$MJBooleanValues id=42>
+                                                                        True
+                                                                    </compiler.IR.MJBoolean$MJBooleanValues>
+                                                                </value>
+                                                                <False>
+                                                                    <compiler.IR.MJBoolean id=43>
+                                                                        <value>
+                                                                            <compiler.IR.MJBoolean$MJBooleanValues id=44>
+                                                                                False
+                                                                            </compiler.IR.MJBoolean$MJBooleanValues>
+                                                                        </value>
+                                                                        <False>
+                                                                            <compiler.IR.MJBoolean id=43>
+                                                                                IS ALREADY SERIALIZED
+                                                                            </compiler.IR.MJBoolean>
+                                                                        </False>
+                                                                        <True>
+                                                                            <compiler.IR.MJBoolean id=41>
+                                                                                IS ALREADY SERIALIZED
+                                                                            </compiler.IR.MJBoolean>
+                                                                        </True>
+                                                                    </compiler.IR.MJBoolean>
+                                                                </False>
+                                                                <True>
+                                                                    <compiler.IR.MJBoolean id=41>
+                                                                        IS ALREADY SERIALIZED
+                                                                    </compiler.IR.MJBoolean>
+                                                                </True>
+                                                            </compiler.IR.MJBoolean>
+                                                        </rhs>
+                                                        <lhs>
+                                                            <compiler.IR.MJIdentifier id=45>
+                                                                <name>
+                                                                    <java.lang.String id=46>
+                                                                        a
+                                                                    </java.lang.String>
+                                                                </name>
+                                                            </compiler.IR.MJIdentifier>
+                                                        </lhs>
+                                                    </compiler.IR.MJAssign>
+                                                    <compiler.IR.MJAssign id=47>
+                                                        <rhs>
+                                                            <compiler.IR.MJInteger id=48>
+                                                                <value>
+                                                                    <java.lang.Integer id=49>
                                                                         40
                                                                     </java.lang.Integer>
                                                                 </value>
                                                             </compiler.IR.MJInteger>
                                                         </rhs>
                                                         <lhs>
-                                                            <compiler.IR.MJIdentifier id=41>
+                                                            <compiler.IR.MJIdentifier id=50>
                                                                 <name>
-                                                                    <java.lang.String id=42>
+                                                                    <java.lang.String id=51>
                                                                         x
                                                                     </java.lang.String>
                                                                 </name>
                                                             </compiler.IR.MJIdentifier>
                                                         </lhs>
                                                     </compiler.IR.MJAssign>
-                                                    <compiler.IR.MJAssign id=43>
+                                                    <compiler.IR.MJAssign id=52>
                                                         <rhs>
-                                                            <compiler.IR.MJInteger id=44>
+                                                            <compiler.IR.MJInteger id=53>
                                                                 <value>
-                                                                    <java.lang.Integer id=45>
+                                                                    <java.lang.Integer id=54>
                                                                         2
                                                                     </java.lang.Integer>
                                                                 </value>
                                                             </compiler.IR.MJInteger>
                                                         </rhs>
                                                         <lhs>
-                                                            <compiler.IR.MJIdentifier id=46>
+                                                            <compiler.IR.MJIdentifier id=55>
                                                                 <name>
-                                                                    <java.lang.String id=47>
+                                                                    <java.lang.String id=56>
                                                                         y
                                                                     </java.lang.String>
                                                                 </name>
                                                             </compiler.IR.MJIdentifier>
                                                         </lhs>
                                                     </compiler.IR.MJAssign>
-                                                    <compiler.IR.MJPrintln id=48>
-                                                        <parameter>
-                                                            <compiler.IR.MJPlus id=49>
-                                                                <lhs>
-                                                                    <compiler.IR.MJIdentifier id=50>
-                                                                        <name>
-                                                                            <java.lang.String id=51>
-                                                                                x
-                                                                            </java.lang.String>
-                                                                        </name>
-                                                                    </compiler.IR.MJIdentifier>
-                                                                </lhs>
-                                                                <rhs>
-                                                                    <compiler.IR.MJIdentifier id=52>
-                                                                        <name>
-                                                                            <java.lang.String id=53>
-                                                                                y
-                                                                            </java.lang.String>
-                                                                        </name>
-                                                                    </compiler.IR.MJIdentifier>
-                                                                </rhs>
-                                                            </compiler.IR.MJPlus>
-                                                        </parameter>
-                                                    </compiler.IR.MJPrintln>
-                                                    <compiler.IR.MJReturn id=54>
+                                                    <compiler.IR.MJIf id=57>
+                                                        <condition>
+                                                            <compiler.IR.MJIdentifier id=58>
+                                                                <name>
+                                                                    <java.lang.String id=59>
+                                                                        a
+                                                                    </java.lang.String>
+                                                                </name>
+                                                            </compiler.IR.MJIdentifier>
+                                                        </condition>
+                                                        <ifBlock>
+                                                            <compiler.IR.MJBlock id=60>
+                                                                <variables>
+                                                                    <java.util.LinkedList id=61>
+                                                                    </java.util.LinkedList>
+                                                                </variables>
+                                                                <statements>
+                                                                    <java.util.LinkedList id=62>
+                                                                        <compiler.IR.MJPrintln id=63>
+                                                                            <parameter>
+                                                                                <compiler.IR.MJPlus id=64>
+                                                                                    <lhs>
+                                                                                        <compiler.IR.MJIdentifier id=65>
+                                                                                            <name>
+                                                                                                <java.lang.String id=66>
+                                                                                                    x
+                                                                                                </java.lang.String>
+                                                                                            </name>
+                                                                                        </compiler.IR.MJIdentifier>
+                                                                                    </lhs>
+                                                                                    <rhs>
+                                                                                        <compiler.IR.MJIdentifier id=67>
+                                                                                            <name>
+                                                                                                <java.lang.String id=68>
+                                                                                                    y
+                                                                                                </java.lang.String>
+                                                                                            </name>
+                                                                                        </compiler.IR.MJIdentifier>
+                                                                                    </rhs>
+                                                                                </compiler.IR.MJPlus>
+                                                                            </parameter>
+                                                                        </compiler.IR.MJPrintln>
+                                                                    </java.util.LinkedList>
+                                                                </statements>
+                                                            </compiler.IR.MJBlock>
+                                                        </ifBlock>
+                                                    </compiler.IR.MJIf>
+                                                    <compiler.IR.MJReturn id=69>
                                                         <argument>
-                                                            <compiler.IR.MJNoExpression id=55>
+                                                            <compiler.IR.MJNoExpression id=70>
                                                             </compiler.IR.MJNoExpression>
                                                         </argument>
                                                     </compiler.IR.MJReturn>
@@ -423,12 +502,12 @@
                                         </compiler.IR.MJBlock>
                                     </body>
                                     <isStatic>
-                                        <java.lang.Boolean id=56>
+                                        <java.lang.Boolean id=71>
                                             true
                                         </java.lang.Boolean>
                                     </isStatic>
                                     <isPublic>
-                                        <java.lang.Boolean id=57>
+                                        <java.lang.Boolean id=72>
                                             true
                                         </java.lang.Boolean>
                                     </isPublic>
@@ -436,7 +515,7 @@
                             </java.util.LinkedList>
                         </methodList>
                         <fieldList>
-                            <java.util.LinkedList id=58>
+                            <java.util.LinkedList id=73>
                             </java.util.LinkedList>
                         </fieldList>
                     </compiler.IR.MJClass>

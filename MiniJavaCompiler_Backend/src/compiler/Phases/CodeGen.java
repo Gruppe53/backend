@@ -93,7 +93,6 @@ public class CodeGen extends IRElementVisitorWithArgument<CODE> {
 
 	@Override
 	public CODE visitStatement(MJIf e, CODE code) throws VisitorException {
-		//TODO kontroller om dette er korrekt
 		code.comment(" IF ");
 		code.commentline(" Check if condition is true ");
 		if(e.getCondition().equals(true)){
@@ -111,15 +110,14 @@ public class CodeGen extends IRElementVisitorWithArgument<CODE> {
 
 	@Override
 	public CODE visitStatement(MJIfElse e, CODE code) throws VisitorException {
-		//TODO kontroller om dette er korrekt
 		code.comment(" IF/ELSE ");
 		
 		code.commentline(" Check if true ");
 		if(e.getCondition().equals(true)){
-			code.commentline(" do ifBlock ");
-			code.commentline(" get the ifBlock ");
+			code.commentline(" get ifBlock ");
 			visitStatement(e.getIfBlock(), code);
 			code.pop(CODE.TMP0);
+			code.commentline(" do ifBlock ");
 			code.push(CODE.TMP0);
 		}
 		else {
@@ -133,10 +131,9 @@ public class CodeGen extends IRElementVisitorWithArgument<CODE> {
 
 		return null;
 	}
-
+	
 	@Override
 	public CODE visitStatement(MJWhile e, CODE code) throws VisitorException {
-		//TODO kontroller om dette er korrekt
 		code.comment(" WHILE BEGIN ");
 		code.commentline(" get the Block ");
 		visitStatement(e.getBlock(), code);
@@ -491,13 +488,13 @@ public class CodeGen extends IRElementVisitorWithArgument<CODE> {
 
 	@Override
 	public CODE visitExpression(MJNegate e, CODE code) throws VisitorException {
-		//TODO Negate burde være korrekt
+		//TODO Negate virker ikke
 		code.comment(" NEGATE BEGIN ");
 		if(e.getType().isBoolean()) {
 			code.commentline(" argument ");
 			visitExpression(e.getArgument(), code);
-			code.commentline(" negate ");
 			code.pop(CODE.TMP1);
+			code.commentline(" negate ");
 			code.add( new LC3NOT(CODE.TMP1, CODE.TMP1) );
 			code.push(CODE.TMP1);
 		}
