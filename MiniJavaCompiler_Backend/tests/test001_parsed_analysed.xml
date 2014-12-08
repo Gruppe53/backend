@@ -1,0 +1,1413 @@
+<compiler.IR.IR id=0>
+    <program>
+        <compiler.IR.MJProgram id=1>
+            <classes>
+                <java.util.LinkedList id=2>
+                    <compiler.IR.MJClass id=3>
+                        <name>
+                            <java.lang.String id=4>
+                                A
+                            </java.lang.String>
+                        </name>
+                        <superClass>
+                            <compiler.IR.MJType id=5>
+                                <type>
+                                    <compiler.IR.MJType$TypeEnum id=6>
+                                        CLASS
+                                    </compiler.IR.MJType$TypeEnum>
+                                </type>
+                                <name>
+                                    <java.lang.String id=7>
+                                        Object
+                                    </java.lang.String>
+                                </name>
+                                <baseType>
+                                    <compiler.IR.MJType>
+                                        NULLREF
+                                    </compiler.IR.MJType>
+                                </baseType>
+                                <decl>
+                                    <compiler.IR.MJClass id=8>
+                                        <name>
+                                            <java.lang.String id=9>
+                                                Object
+                                            </java.lang.String>
+                                        </name>
+                                        <superClass>
+                                            <compiler.IR.MJType>
+                                                NULLREF
+                                            </compiler.IR.MJType>
+                                        </superClass>
+                                        <methodList>
+                                            <java.util.LinkedList id=10>
+                                            </java.util.LinkedList>
+                                        </methodList>
+                                        <fieldList>
+                                            <java.util.LinkedList id=11>
+                                            </java.util.LinkedList>
+                                        </fieldList>
+                                        <isTop>
+                                            <java.lang.Boolean id=12>
+                                                true
+                                            </java.lang.Boolean>
+                                        </isTop>
+                                    </compiler.IR.MJClass>
+                                </decl>
+                                <Tint>
+                                    <compiler.IR.MJType id=13>
+                                        <type>
+                                            <compiler.IR.MJType$TypeEnum id=14>
+                                                INT
+                                            </compiler.IR.MJType$TypeEnum>
+                                        </type>
+                                        <name>
+                                            <java.lang.String id=15>
+                                                int
+                                            </java.lang.String>
+                                        </name>
+                                        <baseType>
+                                            <compiler.IR.MJType>
+                                                NULLREF
+                                            </compiler.IR.MJType>
+                                        </baseType>
+                                        <decl>
+                                            <compiler.IR.MJClass>
+                                                NULLREF
+                                            </compiler.IR.MJClass>
+                                        </decl>
+                                        <Tint>
+                                            <compiler.IR.MJType id=13>
+                                                IS ALREADY SERIALIZED
+                                            </compiler.IR.MJType>
+                                        </Tint>
+                                        <Tboolean>
+                                            <compiler.IR.MJType id=16>
+                                                <type>
+                                                    <compiler.IR.MJType$TypeEnum id=17>
+                                                        BOOLEAN
+                                                    </compiler.IR.MJType$TypeEnum>
+                                                </type>
+                                                <name>
+                                                    <java.lang.String id=18>
+                                                        boolean
+                                                    </java.lang.String>
+                                                </name>
+                                                <baseType>
+                                                    <compiler.IR.MJType>
+                                                        NULLREF
+                                                    </compiler.IR.MJType>
+                                                </baseType>
+                                                <decl>
+                                                    <compiler.IR.MJClass>
+                                                        NULLREF
+                                                    </compiler.IR.MJClass>
+                                                </decl>
+                                                <Tint>
+                                                    <compiler.IR.MJType id=13>
+                                                        IS ALREADY SERIALIZED
+                                                    </compiler.IR.MJType>
+                                                </Tint>
+                                                <Tboolean>
+                                                    <compiler.IR.MJType id=16>
+                                                        IS ALREADY SERIALIZED
+                                                    </compiler.IR.MJType>
+                                                </Tboolean>
+                                                <Tvoid>
+                                                    <compiler.IR.MJType id=19>
+                                                        <type>
+                                                            <compiler.IR.MJType$TypeEnum id=20>
+                                                                VOID
+                                                            </compiler.IR.MJType$TypeEnum>
+                                                        </type>
+                                                        <name>
+                                                            <java.lang.String id=21>
+                                                                void
+                                                            </java.lang.String>
+                                                        </name>
+                                                        <baseType>
+                                                            <compiler.IR.MJType>
+                                                                NULLREF
+                                                            </compiler.IR.MJType>
+                                                        </baseType>
+                                                        <decl>
+                                                            <compiler.IR.MJClass>
+                                                                NULLREF
+                                                            </compiler.IR.MJClass>
+                                                        </decl>
+                                                        <Tint>
+                                                            <compiler.IR.MJType id=13>
+                                                                IS ALREADY SERIALIZED
+                                                            </compiler.IR.MJType>
+                                                        </Tint>
+                                                        <Tboolean>
+                                                            <compiler.IR.MJType id=16>
+                                                                IS ALREADY SERIALIZED
+                                                            </compiler.IR.MJType>
+                                                        </Tboolean>
+                                                        <Tvoid>
+                                                            <compiler.IR.MJType id=19>
+                                                                IS ALREADY SERIALIZED
+                                                            </compiler.IR.MJType>
+                                                        </Tvoid>
+                                                        <Tuntyped>
+                                                            <compiler.IR.MJType id=22>
+                                                                <type>
+                                                                    <compiler.IR.MJType$TypeEnum id=23>
+                                                                        UNTYPED
+                                                                    </compiler.IR.MJType$TypeEnum>
+                                                                </type>
+                                                                <name>
+                                                                    <java.lang.String id=24>
+                                                                        var
+                                                                    </java.lang.String>
+                                                                </name>
+                                                                <baseType>
+                                                                    <compiler.IR.MJType>
+                                                                        NULLREF
+                                                                    </compiler.IR.MJType>
+                                                                </baseType>
+                                                                <decl>
+                                                                    <compiler.IR.MJClass>
+                                                                        NULLREF
+                                                                    </compiler.IR.MJClass>
+                                                                </decl>
+                                                                <Tint>
+                                                                    <compiler.IR.MJType id=13>
+                                                                        IS ALREADY SERIALIZED
+                                                                    </compiler.IR.MJType>
+                                                                </Tint>
+                                                                <Tboolean>
+                                                                    <compiler.IR.MJType id=16>
+                                                                        IS ALREADY SERIALIZED
+                                                                    </compiler.IR.MJType>
+                                                                </Tboolean>
+                                                                <Tvoid>
+                                                                    <compiler.IR.MJType id=19>
+                                                                        IS ALREADY SERIALIZED
+                                                                    </compiler.IR.MJType>
+                                                                </Tvoid>
+                                                                <Tuntyped>
+                                                                    <compiler.IR.MJType id=22>
+                                                                        IS ALREADY SERIALIZED
+                                                                    </compiler.IR.MJType>
+                                                                </Tuntyped>
+                                                            </compiler.IR.MJType>
+                                                        </Tuntyped>
+                                                    </compiler.IR.MJType>
+                                                </Tvoid>
+                                                <Tuntyped>
+                                                    <compiler.IR.MJType id=22>
+                                                        IS ALREADY SERIALIZED
+                                                    </compiler.IR.MJType>
+                                                </Tuntyped>
+                                            </compiler.IR.MJType>
+                                        </Tboolean>
+                                        <Tvoid>
+                                            <compiler.IR.MJType id=19>
+                                                IS ALREADY SERIALIZED
+                                            </compiler.IR.MJType>
+                                        </Tvoid>
+                                        <Tuntyped>
+                                            <compiler.IR.MJType id=22>
+                                                IS ALREADY SERIALIZED
+                                            </compiler.IR.MJType>
+                                        </Tuntyped>
+                                    </compiler.IR.MJType>
+                                </Tint>
+                                <Tboolean>
+                                    <compiler.IR.MJType id=16>
+                                        IS ALREADY SERIALIZED
+                                    </compiler.IR.MJType>
+                                </Tboolean>
+                                <Tvoid>
+                                    <compiler.IR.MJType id=19>
+                                        IS ALREADY SERIALIZED
+                                    </compiler.IR.MJType>
+                                </Tvoid>
+                                <Tuntyped>
+                                    <compiler.IR.MJType id=22>
+                                        IS ALREADY SERIALIZED
+                                    </compiler.IR.MJType>
+                                </Tuntyped>
+                            </compiler.IR.MJType>
+                        </superClass>
+                        <methodList>
+                            <java.util.LinkedList id=25>
+                                <compiler.IR.MJMethod id=26>
+                                    <returnType>
+                                        <compiler.IR.MJType id=19>
+                                            IS ALREADY SERIALIZED
+                                        </compiler.IR.MJType>
+                                    </returnType>
+                                    <name>
+                                        <java.lang.String id=27>
+                                            main
+                                        </java.lang.String>
+                                    </name>
+                                    <parameters>
+                                        <java.util.LinkedList id=28>
+                                            <compiler.IR.MJVariable id=29>
+                                                <type>
+                                                    <compiler.IR.MJType id=30>
+                                                        <type>
+                                                            <compiler.IR.MJType$TypeEnum id=31>
+                                                                ARRAY
+                                                            </compiler.IR.MJType$TypeEnum>
+                                                        </type>
+                                                        <name>
+                                                            <java.lang.String id=32>
+                                                                String[]
+                                                            </java.lang.String>
+                                                        </name>
+                                                        <baseType>
+                                                            <compiler.IR.MJType id=33>
+                                                                <type>
+                                                                    <compiler.IR.MJType$TypeEnum id=6>
+                                                                        IS ALREADY SERIALIZED
+                                                                    </compiler.IR.MJType$TypeEnum>
+                                                                </type>
+                                                                <name>
+                                                                    <java.lang.String id=34>
+                                                                        String
+                                                                    </java.lang.String>
+                                                                </name>
+                                                                <baseType>
+                                                                    <compiler.IR.MJType>
+                                                                        NULLREF
+                                                                    </compiler.IR.MJType>
+                                                                </baseType>
+                                                                <decl>
+                                                                    <compiler.IR.MJClass>
+                                                                        NULLREF
+                                                                    </compiler.IR.MJClass>
+                                                                </decl>
+                                                                <Tint>
+                                                                    <compiler.IR.MJType id=13>
+                                                                        IS ALREADY SERIALIZED
+                                                                    </compiler.IR.MJType>
+                                                                </Tint>
+                                                                <Tboolean>
+                                                                    <compiler.IR.MJType id=16>
+                                                                        IS ALREADY SERIALIZED
+                                                                    </compiler.IR.MJType>
+                                                                </Tboolean>
+                                                                <Tvoid>
+                                                                    <compiler.IR.MJType id=19>
+                                                                        IS ALREADY SERIALIZED
+                                                                    </compiler.IR.MJType>
+                                                                </Tvoid>
+                                                                <Tuntyped>
+                                                                    <compiler.IR.MJType id=22>
+                                                                        IS ALREADY SERIALIZED
+                                                                    </compiler.IR.MJType>
+                                                                </Tuntyped>
+                                                            </compiler.IR.MJType>
+                                                        </baseType>
+                                                        <decl>
+                                                            <compiler.IR.MJClass id=35>
+                                                                <name>
+                                                                    <java.lang.String id=36>
+                                                                        String[]
+                                                                    </java.lang.String>
+                                                                </name>
+                                                                <superClass>
+                                                                    <compiler.IR.MJType id=37>
+                                                                        <type>
+                                                                            <compiler.IR.MJType$TypeEnum id=6>
+                                                                                IS ALREADY SERIALIZED
+                                                                            </compiler.IR.MJType$TypeEnum>
+                                                                        </type>
+                                                                        <name>
+                                                                            <java.lang.String id=9>
+                                                                                IS ALREADY SERIALIZED
+                                                                            </java.lang.String>
+                                                                        </name>
+                                                                        <baseType>
+                                                                            <compiler.IR.MJType>
+                                                                                NULLREF
+                                                                            </compiler.IR.MJType>
+                                                                        </baseType>
+                                                                        <decl>
+                                                                            <compiler.IR.MJClass>
+                                                                                NULLREF
+                                                                            </compiler.IR.MJClass>
+                                                                        </decl>
+                                                                        <Tint>
+                                                                            <compiler.IR.MJType id=13>
+                                                                                IS ALREADY SERIALIZED
+                                                                            </compiler.IR.MJType>
+                                                                        </Tint>
+                                                                        <Tboolean>
+                                                                            <compiler.IR.MJType id=16>
+                                                                                IS ALREADY SERIALIZED
+                                                                            </compiler.IR.MJType>
+                                                                        </Tboolean>
+                                                                        <Tvoid>
+                                                                            <compiler.IR.MJType id=19>
+                                                                                IS ALREADY SERIALIZED
+                                                                            </compiler.IR.MJType>
+                                                                        </Tvoid>
+                                                                        <Tuntyped>
+                                                                            <compiler.IR.MJType id=22>
+                                                                                IS ALREADY SERIALIZED
+                                                                            </compiler.IR.MJType>
+                                                                        </Tuntyped>
+                                                                    </compiler.IR.MJType>
+                                                                </superClass>
+                                                                <methodList>
+                                                                    <java.util.LinkedList id=38>
+                                                                    </java.util.LinkedList>
+                                                                </methodList>
+                                                                <fieldList>
+                                                                    <java.util.LinkedList id=39>
+                                                                        <compiler.IR.MJVariable id=40>
+                                                                            <type>
+                                                                                <compiler.IR.MJType id=13>
+                                                                                    IS ALREADY SERIALIZED
+                                                                                </compiler.IR.MJType>
+                                                                            </type>
+                                                                            <name>
+                                                                                <java.lang.String id=41>
+                                                                                    length
+                                                                                </java.lang.String>
+                                                                            </name>
+                                                                            <isField>
+                                                                                <java.lang.Boolean id=42>
+                                                                                    false
+                                                                                </java.lang.Boolean>
+                                                                            </isField>
+                                                                        </compiler.IR.MJVariable>
+                                                                    </java.util.LinkedList>
+                                                                </fieldList>
+                                                                <isTop>
+                                                                    <java.lang.Boolean id=43>
+                                                                        false
+                                                                    </java.lang.Boolean>
+                                                                </isTop>
+                                                            </compiler.IR.MJClass>
+                                                        </decl>
+                                                        <Tint>
+                                                            <compiler.IR.MJType id=13>
+                                                                IS ALREADY SERIALIZED
+                                                            </compiler.IR.MJType>
+                                                        </Tint>
+                                                        <Tboolean>
+                                                            <compiler.IR.MJType id=16>
+                                                                IS ALREADY SERIALIZED
+                                                            </compiler.IR.MJType>
+                                                        </Tboolean>
+                                                        <Tvoid>
+                                                            <compiler.IR.MJType id=19>
+                                                                IS ALREADY SERIALIZED
+                                                            </compiler.IR.MJType>
+                                                        </Tvoid>
+                                                        <Tuntyped>
+                                                            <compiler.IR.MJType id=22>
+                                                                IS ALREADY SERIALIZED
+                                                            </compiler.IR.MJType>
+                                                        </Tuntyped>
+                                                    </compiler.IR.MJType>
+                                                </type>
+                                                <name>
+                                                    <java.lang.String id=44>
+                                                        arg
+                                                    </java.lang.String>
+                                                </name>
+                                                <isField>
+                                                    <java.lang.Boolean id=45>
+                                                        false
+                                                    </java.lang.Boolean>
+                                                </isField>
+                                            </compiler.IR.MJVariable>
+                                        </java.util.LinkedList>
+                                    </parameters>
+                                    <body>
+                                        <compiler.IR.MJBlock id=46>
+                                            <variables>
+                                                <java.util.LinkedList id=47>
+                                                </java.util.LinkedList>
+                                            </variables>
+                                            <statements>
+                                                <java.util.LinkedList id=48>
+                                                    <compiler.IR.MJPrintln id=49>
+                                                        <parameter>
+                                                            <compiler.IR.MJString id=50>
+                                                                <value>
+                                                                    <java.lang.String id=51>
+                                                                        "Hello World!"
+                                                                    </java.lang.String>
+                                                                </value>
+                                                                <type>
+                                                                    <compiler.IR.MJType id=52>
+                                                                        <type>
+                                                                            <compiler.IR.MJType$TypeEnum id=6>
+                                                                                IS ALREADY SERIALIZED
+                                                                            </compiler.IR.MJType$TypeEnum>
+                                                                        </type>
+                                                                        <name>
+                                                                            <java.lang.String id=53>
+                                                                                String
+                                                                            </java.lang.String>
+                                                                        </name>
+                                                                        <baseType>
+                                                                            <compiler.IR.MJType>
+                                                                                NULLREF
+                                                                            </compiler.IR.MJType>
+                                                                        </baseType>
+                                                                        <decl>
+                                                                            <compiler.IR.MJClass>
+                                                                                NULLREF
+                                                                            </compiler.IR.MJClass>
+                                                                        </decl>
+                                                                        <Tint>
+                                                                            <compiler.IR.MJType id=13>
+                                                                                IS ALREADY SERIALIZED
+                                                                            </compiler.IR.MJType>
+                                                                        </Tint>
+                                                                        <Tboolean>
+                                                                            <compiler.IR.MJType id=16>
+                                                                                IS ALREADY SERIALIZED
+                                                                            </compiler.IR.MJType>
+                                                                        </Tboolean>
+                                                                        <Tvoid>
+                                                                            <compiler.IR.MJType id=19>
+                                                                                IS ALREADY SERIALIZED
+                                                                            </compiler.IR.MJType>
+                                                                        </Tvoid>
+                                                                        <Tuntyped>
+                                                                            <compiler.IR.MJType id=22>
+                                                                                IS ALREADY SERIALIZED
+                                                                            </compiler.IR.MJType>
+                                                                        </Tuntyped>
+                                                                    </compiler.IR.MJType>
+                                                                </type>
+                                                            </compiler.IR.MJString>
+                                                        </parameter>
+                                                    </compiler.IR.MJPrintln>
+                                                    <compiler.IR.MJReturn id=54>
+                                                        <argument>
+                                                            <compiler.IR.MJNoExpression id=55>
+                                                                <type>
+                                                                    <compiler.IR.MJType id=19>
+                                                                        IS ALREADY SERIALIZED
+                                                                    </compiler.IR.MJType>
+                                                                </type>
+                                                            </compiler.IR.MJNoExpression>
+                                                        </argument>
+                                                    </compiler.IR.MJReturn>
+                                                </java.util.LinkedList>
+                                            </statements>
+                                        </compiler.IR.MJBlock>
+                                    </body>
+                                    <isStatic>
+                                        <java.lang.Boolean id=56>
+                                            true
+                                        </java.lang.Boolean>
+                                    </isStatic>
+                                    <isPublic>
+                                        <java.lang.Boolean id=57>
+                                            true
+                                        </java.lang.Boolean>
+                                    </isPublic>
+                                </compiler.IR.MJMethod>
+                            </java.util.LinkedList>
+                        </methodList>
+                        <fieldList>
+                            <java.util.LinkedList id=58>
+                            </java.util.LinkedList>
+                        </fieldList>
+                        <isTop>
+                            <java.lang.Boolean id=59>
+                                false
+                            </java.lang.Boolean>
+                        </isTop>
+                    </compiler.IR.MJClass>
+                    <compiler.IR.MJClass id=8>
+                        IS ALREADY SERIALIZED
+                    </compiler.IR.MJClass>
+                    <compiler.IR.MJClass id=60>
+                        <name>
+                            <java.lang.String id=53>
+                                IS ALREADY SERIALIZED
+                            </java.lang.String>
+                        </name>
+                        <superClass>
+                            <compiler.IR.MJType id=61>
+                                <type>
+                                    <compiler.IR.MJType$TypeEnum id=6>
+                                        IS ALREADY SERIALIZED
+                                    </compiler.IR.MJType$TypeEnum>
+                                </type>
+                                <name>
+                                    <java.lang.String id=9>
+                                        IS ALREADY SERIALIZED
+                                    </java.lang.String>
+                                </name>
+                                <baseType>
+                                    <compiler.IR.MJType>
+                                        NULLREF
+                                    </compiler.IR.MJType>
+                                </baseType>
+                                <decl>
+                                    <compiler.IR.MJClass id=8>
+                                        IS ALREADY SERIALIZED
+                                    </compiler.IR.MJClass>
+                                </decl>
+                                <Tint>
+                                    <compiler.IR.MJType id=13>
+                                        IS ALREADY SERIALIZED
+                                    </compiler.IR.MJType>
+                                </Tint>
+                                <Tboolean>
+                                    <compiler.IR.MJType id=16>
+                                        IS ALREADY SERIALIZED
+                                    </compiler.IR.MJType>
+                                </Tboolean>
+                                <Tvoid>
+                                    <compiler.IR.MJType id=19>
+                                        IS ALREADY SERIALIZED
+                                    </compiler.IR.MJType>
+                                </Tvoid>
+                                <Tuntyped>
+                                    <compiler.IR.MJType id=22>
+                                        IS ALREADY SERIALIZED
+                                    </compiler.IR.MJType>
+                                </Tuntyped>
+                            </compiler.IR.MJType>
+                        </superClass>
+                        <methodList>
+                            <java.util.LinkedList id=62>
+                            </java.util.LinkedList>
+                        </methodList>
+                        <fieldList>
+                            <java.util.LinkedList id=63>
+                                <compiler.IR.MJVariable id=64>
+                                    <type>
+                                        <compiler.IR.MJType id=65>
+                                            <type>
+                                                <compiler.IR.MJType$TypeEnum id=6>
+                                                    IS ALREADY SERIALIZED
+                                                </compiler.IR.MJType$TypeEnum>
+                                            </type>
+                                            <name>
+                                                <java.lang.String id=53>
+                                                    IS ALREADY SERIALIZED
+                                                </java.lang.String>
+                                            </name>
+                                            <baseType>
+                                                <compiler.IR.MJType>
+                                                    NULLREF
+                                                </compiler.IR.MJType>
+                                            </baseType>
+                                            <decl>
+                                                <compiler.IR.MJClass id=60>
+                                                    IS ALREADY SERIALIZED
+                                                </compiler.IR.MJClass>
+                                            </decl>
+                                            <Tint>
+                                                <compiler.IR.MJType id=13>
+                                                    IS ALREADY SERIALIZED
+                                                </compiler.IR.MJType>
+                                            </Tint>
+                                            <Tboolean>
+                                                <compiler.IR.MJType id=16>
+                                                    IS ALREADY SERIALIZED
+                                                </compiler.IR.MJType>
+                                            </Tboolean>
+                                            <Tvoid>
+                                                <compiler.IR.MJType id=19>
+                                                    IS ALREADY SERIALIZED
+                                                </compiler.IR.MJType>
+                                            </Tvoid>
+                                            <Tuntyped>
+                                                <compiler.IR.MJType id=22>
+                                                    IS ALREADY SERIALIZED
+                                                </compiler.IR.MJType>
+                                            </Tuntyped>
+                                        </compiler.IR.MJType>
+                                    </type>
+                                    <name>
+                                        <java.lang.String id=66>
+                                            text
+                                        </java.lang.String>
+                                    </name>
+                                    <isField>
+                                        <java.lang.Boolean id=67>
+                                            true
+                                        </java.lang.Boolean>
+                                    </isField>
+                                </compiler.IR.MJVariable>
+                                <compiler.IR.MJVariable id=68>
+                                    <type>
+                                        <compiler.IR.MJType id=13>
+                                            IS ALREADY SERIALIZED
+                                        </compiler.IR.MJType>
+                                    </type>
+                                    <name>
+                                        <java.lang.String id=41>
+                                            IS ALREADY SERIALIZED
+                                        </java.lang.String>
+                                    </name>
+                                    <isField>
+                                        <java.lang.Boolean id=69>
+                                            true
+                                        </java.lang.Boolean>
+                                    </isField>
+                                </compiler.IR.MJVariable>
+                            </java.util.LinkedList>
+                        </fieldList>
+                        <isTop>
+                            <java.lang.Boolean id=70>
+                                false
+                            </java.lang.Boolean>
+                        </isTop>
+                    </compiler.IR.MJClass>
+                </java.util.LinkedList>
+            </classes>
+        </compiler.IR.MJProgram>
+    </program>
+    <classes>
+        <compiler.IR.support.MJClassTable id=71>
+            <map>
+                <java.util.HashMap id=72>
+                    <KeyValuePair>
+                        <key>
+                            <java.lang.String id=73>
+                                boolean[]
+                            </java.lang.String>
+                        </key>
+                        <value>
+                            <compiler.IR.MJClass id=74>
+                                <name>
+                                    <java.lang.String id=73>
+                                        IS ALREADY SERIALIZED
+                                    </java.lang.String>
+                                </name>
+                                <superClass>
+                                    <compiler.IR.MJType id=75>
+                                        <type>
+                                            <compiler.IR.MJType$TypeEnum id=6>
+                                                IS ALREADY SERIALIZED
+                                            </compiler.IR.MJType$TypeEnum>
+                                        </type>
+                                        <name>
+                                            <java.lang.String id=9>
+                                                IS ALREADY SERIALIZED
+                                            </java.lang.String>
+                                        </name>
+                                        <baseType>
+                                            <compiler.IR.MJType>
+                                                NULLREF
+                                            </compiler.IR.MJType>
+                                        </baseType>
+                                        <decl>
+                                            <compiler.IR.MJClass>
+                                                NULLREF
+                                            </compiler.IR.MJClass>
+                                        </decl>
+                                        <Tint>
+                                            <compiler.IR.MJType id=13>
+                                                IS ALREADY SERIALIZED
+                                            </compiler.IR.MJType>
+                                        </Tint>
+                                        <Tboolean>
+                                            <compiler.IR.MJType id=16>
+                                                IS ALREADY SERIALIZED
+                                            </compiler.IR.MJType>
+                                        </Tboolean>
+                                        <Tvoid>
+                                            <compiler.IR.MJType id=19>
+                                                IS ALREADY SERIALIZED
+                                            </compiler.IR.MJType>
+                                        </Tvoid>
+                                        <Tuntyped>
+                                            <compiler.IR.MJType id=22>
+                                                IS ALREADY SERIALIZED
+                                            </compiler.IR.MJType>
+                                        </Tuntyped>
+                                    </compiler.IR.MJType>
+                                </superClass>
+                                <methodList>
+                                    <java.util.LinkedList id=76>
+                                    </java.util.LinkedList>
+                                </methodList>
+                                <fieldList>
+                                    <java.util.LinkedList id=77>
+                                        <compiler.IR.MJVariable id=78>
+                                            <type>
+                                                <compiler.IR.MJType id=79>
+                                                    <type>
+                                                        <compiler.IR.MJType$TypeEnum id=14>
+                                                            IS ALREADY SERIALIZED
+                                                        </compiler.IR.MJType$TypeEnum>
+                                                    </type>
+                                                    <name>
+                                                        <java.lang.String id=80>
+                                                            int
+                                                        </java.lang.String>
+                                                    </name>
+                                                    <baseType>
+                                                        <compiler.IR.MJType>
+                                                            NULLREF
+                                                        </compiler.IR.MJType>
+                                                    </baseType>
+                                                    <decl>
+                                                        <compiler.IR.MJClass>
+                                                            NULLREF
+                                                        </compiler.IR.MJClass>
+                                                    </decl>
+                                                    <Tint>
+                                                        <compiler.IR.MJType id=13>
+                                                            IS ALREADY SERIALIZED
+                                                        </compiler.IR.MJType>
+                                                    </Tint>
+                                                    <Tboolean>
+                                                        <compiler.IR.MJType id=16>
+                                                            IS ALREADY SERIALIZED
+                                                        </compiler.IR.MJType>
+                                                    </Tboolean>
+                                                    <Tvoid>
+                                                        <compiler.IR.MJType id=19>
+                                                            IS ALREADY SERIALIZED
+                                                        </compiler.IR.MJType>
+                                                    </Tvoid>
+                                                    <Tuntyped>
+                                                        <compiler.IR.MJType id=22>
+                                                            IS ALREADY SERIALIZED
+                                                        </compiler.IR.MJType>
+                                                    </Tuntyped>
+                                                </compiler.IR.MJType>
+                                            </type>
+                                            <name>
+                                                <java.lang.String id=41>
+                                                    IS ALREADY SERIALIZED
+                                                </java.lang.String>
+                                            </name>
+                                            <isField>
+                                                <java.lang.Boolean id=81>
+                                                    false
+                                                </java.lang.Boolean>
+                                            </isField>
+                                        </compiler.IR.MJVariable>
+                                    </java.util.LinkedList>
+                                </fieldList>
+                                <isTop>
+                                    <java.lang.Boolean id=82>
+                                        false
+                                    </java.lang.Boolean>
+                                </isTop>
+                            </compiler.IR.MJClass>
+                        </value>
+                    </KeyValuePair>
+                    <KeyValuePair>
+                        <key>
+                            <java.lang.String id=83>
+                                A[]
+                            </java.lang.String>
+                        </key>
+                        <value>
+                            <compiler.IR.MJClass id=84>
+                                <name>
+                                    <java.lang.String id=83>
+                                        IS ALREADY SERIALIZED
+                                    </java.lang.String>
+                                </name>
+                                <superClass>
+                                    <compiler.IR.MJType id=85>
+                                        <type>
+                                            <compiler.IR.MJType$TypeEnum id=6>
+                                                IS ALREADY SERIALIZED
+                                            </compiler.IR.MJType$TypeEnum>
+                                        </type>
+                                        <name>
+                                            <java.lang.String id=9>
+                                                IS ALREADY SERIALIZED
+                                            </java.lang.String>
+                                        </name>
+                                        <baseType>
+                                            <compiler.IR.MJType>
+                                                NULLREF
+                                            </compiler.IR.MJType>
+                                        </baseType>
+                                        <decl>
+                                            <compiler.IR.MJClass>
+                                                NULLREF
+                                            </compiler.IR.MJClass>
+                                        </decl>
+                                        <Tint>
+                                            <compiler.IR.MJType id=13>
+                                                IS ALREADY SERIALIZED
+                                            </compiler.IR.MJType>
+                                        </Tint>
+                                        <Tboolean>
+                                            <compiler.IR.MJType id=16>
+                                                IS ALREADY SERIALIZED
+                                            </compiler.IR.MJType>
+                                        </Tboolean>
+                                        <Tvoid>
+                                            <compiler.IR.MJType id=19>
+                                                IS ALREADY SERIALIZED
+                                            </compiler.IR.MJType>
+                                        </Tvoid>
+                                        <Tuntyped>
+                                            <compiler.IR.MJType id=22>
+                                                IS ALREADY SERIALIZED
+                                            </compiler.IR.MJType>
+                                        </Tuntyped>
+                                    </compiler.IR.MJType>
+                                </superClass>
+                                <methodList>
+                                    <java.util.LinkedList id=86>
+                                    </java.util.LinkedList>
+                                </methodList>
+                                <fieldList>
+                                    <java.util.LinkedList id=87>
+                                        <compiler.IR.MJVariable id=88>
+                                            <type>
+                                                <compiler.IR.MJType id=13>
+                                                    IS ALREADY SERIALIZED
+                                                </compiler.IR.MJType>
+                                            </type>
+                                            <name>
+                                                <java.lang.String id=41>
+                                                    IS ALREADY SERIALIZED
+                                                </java.lang.String>
+                                            </name>
+                                            <isField>
+                                                <java.lang.Boolean id=89>
+                                                    false
+                                                </java.lang.Boolean>
+                                            </isField>
+                                        </compiler.IR.MJVariable>
+                                    </java.util.LinkedList>
+                                </fieldList>
+                                <isTop>
+                                    <java.lang.Boolean id=90>
+                                        false
+                                    </java.lang.Boolean>
+                                </isTop>
+                            </compiler.IR.MJClass>
+                        </value>
+                    </KeyValuePair>
+                    <KeyValuePair>
+                        <key>
+                            <java.lang.String id=36>
+                                IS ALREADY SERIALIZED
+                            </java.lang.String>
+                        </key>
+                        <value>
+                            <compiler.IR.MJClass id=35>
+                                IS ALREADY SERIALIZED
+                            </compiler.IR.MJClass>
+                        </value>
+                    </KeyValuePair>
+                    <KeyValuePair>
+                        <key>
+                            <java.lang.String id=4>
+                                IS ALREADY SERIALIZED
+                            </java.lang.String>
+                        </key>
+                        <value>
+                            <compiler.IR.MJClass id=3>
+                                IS ALREADY SERIALIZED
+                            </compiler.IR.MJClass>
+                        </value>
+                    </KeyValuePair>
+                    <KeyValuePair>
+                        <key>
+                            <java.lang.String id=53>
+                                IS ALREADY SERIALIZED
+                            </java.lang.String>
+                        </key>
+                        <value>
+                            <compiler.IR.MJClass id=60>
+                                IS ALREADY SERIALIZED
+                            </compiler.IR.MJClass>
+                        </value>
+                    </KeyValuePair>
+                    <KeyValuePair>
+                        <key>
+                            <java.lang.String id=91>
+                                int[]
+                            </java.lang.String>
+                        </key>
+                        <value>
+                            <compiler.IR.MJClass id=92>
+                                <name>
+                                    <java.lang.String id=91>
+                                        IS ALREADY SERIALIZED
+                                    </java.lang.String>
+                                </name>
+                                <superClass>
+                                    <compiler.IR.MJType id=93>
+                                        <type>
+                                            <compiler.IR.MJType$TypeEnum id=6>
+                                                IS ALREADY SERIALIZED
+                                            </compiler.IR.MJType$TypeEnum>
+                                        </type>
+                                        <name>
+                                            <java.lang.String id=9>
+                                                IS ALREADY SERIALIZED
+                                            </java.lang.String>
+                                        </name>
+                                        <baseType>
+                                            <compiler.IR.MJType>
+                                                NULLREF
+                                            </compiler.IR.MJType>
+                                        </baseType>
+                                        <decl>
+                                            <compiler.IR.MJClass>
+                                                NULLREF
+                                            </compiler.IR.MJClass>
+                                        </decl>
+                                        <Tint>
+                                            <compiler.IR.MJType id=13>
+                                                IS ALREADY SERIALIZED
+                                            </compiler.IR.MJType>
+                                        </Tint>
+                                        <Tboolean>
+                                            <compiler.IR.MJType id=16>
+                                                IS ALREADY SERIALIZED
+                                            </compiler.IR.MJType>
+                                        </Tboolean>
+                                        <Tvoid>
+                                            <compiler.IR.MJType id=19>
+                                                IS ALREADY SERIALIZED
+                                            </compiler.IR.MJType>
+                                        </Tvoid>
+                                        <Tuntyped>
+                                            <compiler.IR.MJType id=22>
+                                                IS ALREADY SERIALIZED
+                                            </compiler.IR.MJType>
+                                        </Tuntyped>
+                                    </compiler.IR.MJType>
+                                </superClass>
+                                <methodList>
+                                    <java.util.LinkedList id=94>
+                                    </java.util.LinkedList>
+                                </methodList>
+                                <fieldList>
+                                    <java.util.LinkedList id=95>
+                                        <compiler.IR.MJVariable id=96>
+                                            <type>
+                                                <compiler.IR.MJType id=79>
+                                                    IS ALREADY SERIALIZED
+                                                </compiler.IR.MJType>
+                                            </type>
+                                            <name>
+                                                <java.lang.String id=41>
+                                                    IS ALREADY SERIALIZED
+                                                </java.lang.String>
+                                            </name>
+                                            <isField>
+                                                <java.lang.Boolean id=97>
+                                                    false
+                                                </java.lang.Boolean>
+                                            </isField>
+                                        </compiler.IR.MJVariable>
+                                    </java.util.LinkedList>
+                                </fieldList>
+                                <isTop>
+                                    <java.lang.Boolean id=98>
+                                        false
+                                    </java.lang.Boolean>
+                                </isTop>
+                            </compiler.IR.MJClass>
+                        </value>
+                    </KeyValuePair>
+                    <KeyValuePair>
+                        <key>
+                            <java.lang.String id=9>
+                                IS ALREADY SERIALIZED
+                            </java.lang.String>
+                        </key>
+                        <value>
+                            <compiler.IR.MJClass id=8>
+                                IS ALREADY SERIALIZED
+                            </compiler.IR.MJClass>
+                        </value>
+                    </KeyValuePair>
+                    <KeyValuePair>
+                        <key>
+                            <java.lang.String id=99>
+                                Object[]
+                            </java.lang.String>
+                        </key>
+                        <value>
+                            <compiler.IR.MJClass id=100>
+                                <name>
+                                    <java.lang.String id=99>
+                                        IS ALREADY SERIALIZED
+                                    </java.lang.String>
+                                </name>
+                                <superClass>
+                                    <compiler.IR.MJType id=101>
+                                        <type>
+                                            <compiler.IR.MJType$TypeEnum id=6>
+                                                IS ALREADY SERIALIZED
+                                            </compiler.IR.MJType$TypeEnum>
+                                        </type>
+                                        <name>
+                                            <java.lang.String id=9>
+                                                IS ALREADY SERIALIZED
+                                            </java.lang.String>
+                                        </name>
+                                        <baseType>
+                                            <compiler.IR.MJType>
+                                                NULLREF
+                                            </compiler.IR.MJType>
+                                        </baseType>
+                                        <decl>
+                                            <compiler.IR.MJClass>
+                                                NULLREF
+                                            </compiler.IR.MJClass>
+                                        </decl>
+                                        <Tint>
+                                            <compiler.IR.MJType id=13>
+                                                IS ALREADY SERIALIZED
+                                            </compiler.IR.MJType>
+                                        </Tint>
+                                        <Tboolean>
+                                            <compiler.IR.MJType id=16>
+                                                IS ALREADY SERIALIZED
+                                            </compiler.IR.MJType>
+                                        </Tboolean>
+                                        <Tvoid>
+                                            <compiler.IR.MJType id=19>
+                                                IS ALREADY SERIALIZED
+                                            </compiler.IR.MJType>
+                                        </Tvoid>
+                                        <Tuntyped>
+                                            <compiler.IR.MJType id=22>
+                                                IS ALREADY SERIALIZED
+                                            </compiler.IR.MJType>
+                                        </Tuntyped>
+                                    </compiler.IR.MJType>
+                                </superClass>
+                                <methodList>
+                                    <java.util.LinkedList id=102>
+                                    </java.util.LinkedList>
+                                </methodList>
+                                <fieldList>
+                                    <java.util.LinkedList id=103>
+                                        <compiler.IR.MJVariable id=104>
+                                            <type>
+                                                <compiler.IR.MJType id=13>
+                                                    IS ALREADY SERIALIZED
+                                                </compiler.IR.MJType>
+                                            </type>
+                                            <name>
+                                                <java.lang.String id=41>
+                                                    IS ALREADY SERIALIZED
+                                                </java.lang.String>
+                                            </name>
+                                            <isField>
+                                                <java.lang.Boolean id=105>
+                                                    false
+                                                </java.lang.Boolean>
+                                            </isField>
+                                        </compiler.IR.MJVariable>
+                                    </java.util.LinkedList>
+                                </fieldList>
+                                <isTop>
+                                    <java.lang.Boolean id=106>
+                                        false
+                                    </java.lang.Boolean>
+                                </isTop>
+                            </compiler.IR.MJClass>
+                        </value>
+                    </KeyValuePair>
+                </java.util.HashMap>
+            </map>
+            <fieldmap>
+                <java.util.HashMap id=107>
+                    <KeyValuePair>
+                        <key>
+                            <compiler.IR.MJClass id=84>
+                                IS ALREADY SERIALIZED
+                            </compiler.IR.MJClass>
+                        </key>
+                        <value>
+                            <compiler.IR.support.MJSymbolTable id=108>
+                                <map>
+                                    <java.util.HashMap id=109>
+                                        <KeyValuePair>
+                                            <key>
+                                                <java.lang.String id=41>
+                                                    IS ALREADY SERIALIZED
+                                                </java.lang.String>
+                                            </key>
+                                            <value>
+                                                <compiler.IR.MJVariable id=88>
+                                                    IS ALREADY SERIALIZED
+                                                </compiler.IR.MJVariable>
+                                            </value>
+                                        </KeyValuePair>
+                                    </java.util.HashMap>
+                                </map>
+                            </compiler.IR.support.MJSymbolTable>
+                        </value>
+                    </KeyValuePair>
+                    <KeyValuePair>
+                        <key>
+                            <compiler.IR.MJClass id=35>
+                                IS ALREADY SERIALIZED
+                            </compiler.IR.MJClass>
+                        </key>
+                        <value>
+                            <compiler.IR.support.MJSymbolTable id=110>
+                                <map>
+                                    <java.util.HashMap id=111>
+                                        <KeyValuePair>
+                                            <key>
+                                                <java.lang.String id=41>
+                                                    IS ALREADY SERIALIZED
+                                                </java.lang.String>
+                                            </key>
+                                            <value>
+                                                <compiler.IR.MJVariable id=40>
+                                                    IS ALREADY SERIALIZED
+                                                </compiler.IR.MJVariable>
+                                            </value>
+                                        </KeyValuePair>
+                                    </java.util.HashMap>
+                                </map>
+                            </compiler.IR.support.MJSymbolTable>
+                        </value>
+                    </KeyValuePair>
+                    <KeyValuePair>
+                        <key>
+                            <compiler.IR.MJClass id=8>
+                                IS ALREADY SERIALIZED
+                            </compiler.IR.MJClass>
+                        </key>
+                        <value>
+                            <compiler.IR.support.MJSymbolTable id=112>
+                                <map>
+                                    <java.util.HashMap id=113>
+                                    </java.util.HashMap>
+                                </map>
+                            </compiler.IR.support.MJSymbolTable>
+                        </value>
+                    </KeyValuePair>
+                    <KeyValuePair>
+                        <key>
+                            <compiler.IR.MJClass id=100>
+                                IS ALREADY SERIALIZED
+                            </compiler.IR.MJClass>
+                        </key>
+                        <value>
+                            <compiler.IR.support.MJSymbolTable id=114>
+                                <map>
+                                    <java.util.HashMap id=115>
+                                        <KeyValuePair>
+                                            <key>
+                                                <java.lang.String id=41>
+                                                    IS ALREADY SERIALIZED
+                                                </java.lang.String>
+                                            </key>
+                                            <value>
+                                                <compiler.IR.MJVariable id=104>
+                                                    IS ALREADY SERIALIZED
+                                                </compiler.IR.MJVariable>
+                                            </value>
+                                        </KeyValuePair>
+                                    </java.util.HashMap>
+                                </map>
+                            </compiler.IR.support.MJSymbolTable>
+                        </value>
+                    </KeyValuePair>
+                    <KeyValuePair>
+                        <key>
+                            <compiler.IR.MJClass id=3>
+                                IS ALREADY SERIALIZED
+                            </compiler.IR.MJClass>
+                        </key>
+                        <value>
+                            <compiler.IR.support.MJSymbolTable id=116>
+                                <map>
+                                    <java.util.HashMap id=117>
+                                    </java.util.HashMap>
+                                </map>
+                            </compiler.IR.support.MJSymbolTable>
+                        </value>
+                    </KeyValuePair>
+                    <KeyValuePair>
+                        <key>
+                            <compiler.IR.MJClass id=92>
+                                IS ALREADY SERIALIZED
+                            </compiler.IR.MJClass>
+                        </key>
+                        <value>
+                            <compiler.IR.support.MJSymbolTable id=118>
+                                <map>
+                                    <java.util.HashMap id=119>
+                                        <KeyValuePair>
+                                            <key>
+                                                <java.lang.String id=41>
+                                                    IS ALREADY SERIALIZED
+                                                </java.lang.String>
+                                            </key>
+                                            <value>
+                                                <compiler.IR.MJVariable id=96>
+                                                    IS ALREADY SERIALIZED
+                                                </compiler.IR.MJVariable>
+                                            </value>
+                                        </KeyValuePair>
+                                    </java.util.HashMap>
+                                </map>
+                            </compiler.IR.support.MJSymbolTable>
+                        </value>
+                    </KeyValuePair>
+                    <KeyValuePair>
+                        <key>
+                            <compiler.IR.MJClass id=60>
+                                IS ALREADY SERIALIZED
+                            </compiler.IR.MJClass>
+                        </key>
+                        <value>
+                            <compiler.IR.support.MJSymbolTable id=120>
+                                <map>
+                                    <java.util.HashMap id=121>
+                                        <KeyValuePair>
+                                            <key>
+                                                <java.lang.String id=66>
+                                                    IS ALREADY SERIALIZED
+                                                </java.lang.String>
+                                            </key>
+                                            <value>
+                                                <compiler.IR.MJVariable id=64>
+                                                    IS ALREADY SERIALIZED
+                                                </compiler.IR.MJVariable>
+                                            </value>
+                                        </KeyValuePair>
+                                        <KeyValuePair>
+                                            <key>
+                                                <java.lang.String id=41>
+                                                    IS ALREADY SERIALIZED
+                                                </java.lang.String>
+                                            </key>
+                                            <value>
+                                                <compiler.IR.MJVariable id=68>
+                                                    IS ALREADY SERIALIZED
+                                                </compiler.IR.MJVariable>
+                                            </value>
+                                        </KeyValuePair>
+                                    </java.util.HashMap>
+                                </map>
+                            </compiler.IR.support.MJSymbolTable>
+                        </value>
+                    </KeyValuePair>
+                    <KeyValuePair>
+                        <key>
+                            <compiler.IR.MJClass id=74>
+                                IS ALREADY SERIALIZED
+                            </compiler.IR.MJClass>
+                        </key>
+                        <value>
+                            <compiler.IR.support.MJSymbolTable id=122>
+                                <map>
+                                    <java.util.HashMap id=123>
+                                        <KeyValuePair>
+                                            <key>
+                                                <java.lang.String id=41>
+                                                    IS ALREADY SERIALIZED
+                                                </java.lang.String>
+                                            </key>
+                                            <value>
+                                                <compiler.IR.MJVariable id=78>
+                                                    IS ALREADY SERIALIZED
+                                                </compiler.IR.MJVariable>
+                                            </value>
+                                        </KeyValuePair>
+                                    </java.util.HashMap>
+                                </map>
+                            </compiler.IR.support.MJSymbolTable>
+                        </value>
+                    </KeyValuePair>
+                </java.util.HashMap>
+            </fieldmap>
+            <methodMap>
+                <java.util.HashMap id=124>
+                    <KeyValuePair>
+                        <key>
+                            <compiler.IR.MJClass id=8>
+                                IS ALREADY SERIALIZED
+                            </compiler.IR.MJClass>
+                        </key>
+                        <value>
+                            <compiler.IR.support.MJMethodTable id=125>
+                                <map>
+                                    <java.util.HashMap id=126>
+                                    </java.util.HashMap>
+                                </map>
+                            </compiler.IR.support.MJMethodTable>
+                        </value>
+                    </KeyValuePair>
+                    <KeyValuePair>
+                        <key>
+                            <compiler.IR.MJClass id=3>
+                                IS ALREADY SERIALIZED
+                            </compiler.IR.MJClass>
+                        </key>
+                        <value>
+                            <compiler.IR.support.MJMethodTable id=127>
+                                <map>
+                                    <java.util.HashMap id=128>
+                                        <KeyValuePair>
+                                            <key>
+                                                <java.lang.String id=27>
+                                                    IS ALREADY SERIALIZED
+                                                </java.lang.String>
+                                            </key>
+                                            <value>
+                                                <java.util.HashSet id=129>
+                                                    <compiler.IR.MJMethod id=26>
+                                                        IS ALREADY SERIALIZED
+                                                    </compiler.IR.MJMethod>
+                                                </java.util.HashSet>
+                                            </value>
+                                        </KeyValuePair>
+                                    </java.util.HashMap>
+                                </map>
+                            </compiler.IR.support.MJMethodTable>
+                        </value>
+                    </KeyValuePair>
+                    <KeyValuePair>
+                        <key>
+                            <compiler.IR.MJClass id=60>
+                                IS ALREADY SERIALIZED
+                            </compiler.IR.MJClass>
+                        </key>
+                        <value>
+                            <compiler.IR.support.MJMethodTable id=130>
+                                <map>
+                                    <java.util.HashMap id=131>
+                                    </java.util.HashMap>
+                                </map>
+                            </compiler.IR.support.MJMethodTable>
+                        </value>
+                    </KeyValuePair>
+                </java.util.HashMap>
+            </methodMap>
+        </compiler.IR.support.MJClassTable>
+    </classes>
+    <stack>
+        <compiler.IR.support.MJScopeStack id=132>
+            <stack>
+                <java.util.Stack id=133>
+                </java.util.Stack>
+            </stack>
+        </compiler.IR.support.MJScopeStack>
+    </stack>
+    <currentMethod>
+        <compiler.IR.MJMethod id=26>
+            IS ALREADY SERIALIZED
+        </compiler.IR.MJMethod>
+    </currentMethod>
+    <currentClass>
+        <compiler.IR.MJClass id=60>
+            IS ALREADY SERIALIZED
+        </compiler.IR.MJClass>
+    </currentClass>
+</compiler.IR.IR>
