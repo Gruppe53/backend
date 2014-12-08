@@ -95,12 +95,11 @@ public class CodeGen extends IRElementVisitorWithArgument<CODE> {
 	public CODE visitStatement(MJIf e, CODE code) throws VisitorException {
 		//TODO kontroller om dette er korrekt
 		code.comment(" IF ");
-		code.commentline(" get the ifBlock ");
-		visitStatement(e.getIfBlock(), code);
-		code.pop(CODE.TMP0);
-		code.commentline(" get the condition ");
-		visitExpression(e.getCondition(), code);
+		code.commentline(" Check if condition is true ");
 		if(e.getCondition().equals(true)){
+			code.commentline(" get the ifBlock ");
+			visitStatement(e.getIfBlock(), code);
+			code.pop(CODE.TMP0);
 			code.commentline(" do ifBlock ");
 			code.push(CODE.TMP0);
 		}
@@ -114,20 +113,21 @@ public class CodeGen extends IRElementVisitorWithArgument<CODE> {
 	public CODE visitStatement(MJIfElse e, CODE code) throws VisitorException {
 		//TODO kontroller om dette er korrekt
 		code.comment(" IF/ELSE ");
-		code.commentline(" get the ifBlock ");
-		visitStatement(e.getIfBlock(), code);
-		code.commentline(" get the elseBlock ");
-		visitStatement(e.getElseBlock(), code);
-		code.pop2(CODE.TMP0, CODE.TMP1);
-		code.commentline(" get the condition ");
-		visitExpression(e.getCondition(), code);
+		
+		code.commentline(" Check if true ");
 		if(e.getCondition().equals(true)){
 			code.commentline(" do ifBlock ");
+			code.commentline(" get the ifBlock ");
+			visitStatement(e.getIfBlock(), code);
+			code.pop(CODE.TMP0);
 			code.push(CODE.TMP0);
 		}
 		else {
+			code.commentline(" get the elseBlock ");
+			visitStatement(e.getElseBlock(), code);
+			code.pop(CODE.TMP0);
 			code.commentline(" do elseBlock ");
-			code.push(CODE.TMP1);
+			code.push(CODE.TMP0);
 		}
 		code.comment(" IF/ELSE END ");
 
@@ -439,7 +439,6 @@ public class CodeGen extends IRElementVisitorWithArgument<CODE> {
 
 	@Override
 	public CODE visitExpression(MJMinus e, CODE code) throws VisitorException {
-		//TODO kontroller om dette er korrekt
 		code.comment(" MINUS BEGIN ");
 		code.commentline(" lhs ");
 		visitExpression(e.getLhs(), code);
@@ -448,7 +447,7 @@ public class CodeGen extends IRElementVisitorWithArgument<CODE> {
 		code.commentline(" subtract integers ");
 		code.pop2( CODE.TMP0, CODE.TMP1);
 		code.add( new LC3NOT(CODE.TMP1, CODE.TMP1));
-		code.add( new LC3ADD(CODE.TMP1, CODE.TMP1, 1)); //TODO skal denne linje være der, da det er en integer? 
+		code.add( new LC3ADD(CODE.TMP1, CODE.TMP1, 1)); 
 		code.add( new LC3ADD(CODE.TMP0, CODE.TMP0, CODE.TMP1));
 		code.push( CODE.TMP0 );
 		
@@ -494,12 +493,14 @@ public class CodeGen extends IRElementVisitorWithArgument<CODE> {
 	public CODE visitExpression(MJNegate e, CODE code) throws VisitorException {
 		//TODO Negate burde være korrekt
 		code.comment(" NEGATE BEGIN ");
-		code.commentline(" argument ");
-		visitExpression(e.getArgument(), code);
-		code.commentline(" negate ");
-		code.pop(CODE.TMP0);
-		code.add( new LC3NOT(CODE.TMP0, CODE.TMP0) );
-		code.push(CODE.TMP0);
+		if(e.getType().isBoolean()) {
+			code.commentline(" argument ");
+			visitExpression(e.getArgument(), code);
+			code.commentline(" negate ");
+			code.pop(CODE.TMP1);
+			code.add( new LC3NOT(CODE.TMP1, CODE.TMP1) );
+			code.push(CODE.TMP1);
+		}
 		
 		code.comment(" NEGATE END ");
 		return null;
@@ -1305,7 +1306,7 @@ public class CodeGen extends IRElementVisitorWithArgument<CODE> {
 		code.add( new LC3TRAP(0x22));
 		code.add( new LC3TRAP(0x25));
 		code.add( npeerrmsg);
-		code.add( new LC3string("Null pointer exception\n"));
+		code.add( new LC3string("Null pointer exception\\n"));
 
 		code.comment(" index out of bounds exception ");
 		code.commentline( " prints error message and exits");
@@ -1317,7 +1318,7 @@ public class CodeGen extends IRElementVisitorWithArgument<CODE> {
 		code.add( new LC3TRAP(0x22));
 		code.add( new LC3TRAP(0x25));
 		code.add( iooberrmsg);
-		code.add( new LC3string("Index out of bounds exception\n"));
+		code.add( new LC3string("Index out of bounds exception\\n"));
 
 		code.comment(" add two strings ");
 		code.commentline( " expects args on top of stack, puts result on stack");
@@ -1640,70 +1641,69 @@ public class CodeGen extends IRElementVisitorWithArgument<CODE> {
 		}
 
 	}
-
+	
 	private void addRuntimeSetup(MJProgram e, CODE code) throws CodeGenException {
-		code.commentline(" initialize CONST0 and CONST1");
-		code.add(new LC3AND(CODE.CONST0, CODE.CONST0, 0));
-		code.add(new LC3ADD(CODE.CONST1, CODE.CONST0, 1));
-
-		LC3label cont = code.newLabel();
-		LC3label data = code.newLabel();
-		LC3label heap = code.newLabel();
-
-		code.commentline(" set SFP and HP ");
-		code.add( new LC3LD(CODE.SFP, data));
-		code.add( new LC3LD(CODE.HP, heap));
-
-		code.add( new LC3BR(cont) );
-		code.commentline(" data for SFP and HP");
-		code.add(data);
-		code.add( new LC3int(code.getFramestack()) );
-		code.add(heap);
-		code.add( new LC3int(code.getHeap()));
-
-		String[] args = Compiler.getArguments();
-		if (args.length>0) {
-			code.commentline(" arguments to main");
-			code.commentline(" string contents");
-			LC3label[] contlabs = new LC3label[args.length];
-			LC3label[] strlabs = new LC3label[args.length];
-			for (int i=0;i<args.length;i++) {
-				contlabs[i] = code.newLabel();
-				code.add( contlabs[i] );
-				code.add( new LC3string(args[i]));
-			}
-			code.commentline(" strings");
-			for (int i=0;i<args.length;i++) {
-				strlabs[i] = code.newLabel();
-				code.add( strlabs[i]);
-				code.add( new LC3labeldata(contlabs[i]) );
-				code.add( new LC3int(args[i].length()+1));	
-			}
-			code.commentline(" args array");
-			code.add(code.arguments);
-			code.add(new LC3int(args.length));
-			for (int i=0;i<args.length;i++) {
-				code.add( new LC3labeldata(strlabs[i]));
-			}
-		}
-		code.comment("Virtual Method Tables");
-		
-		for (MJClass c : e.getClasses()) {
-			LC3label vmtlabel = c.getVMTlabel();
-			LC3label actlabel = code.newLabel();
-			
-			code.comment("BEGIN " + c.getName()+" virtual method table");
-			code.add(vmtlabel);
-			code.add( new LC3labeldata(actlabel));
-			code.add(actlabel);
-			for (int idx=0; idx<c.getMethodTable().size(); idx++) {
-				MJMethod m = c.getMethodTable().get(idx);
-				code.commentline(" "+idx+" "+m.getName());
-				code.add( new LC3labeldata(m.getLabel()));
-			}
-			code.comment("END " + c.getName()+" virtual method table");
-		}
-		code.add(cont);
-
-	}
+        code.commentline(" initialize CONST0 and CONST1");
+        code.add(new LC3AND(CODE.CONST0, CODE.CONST0, 0));
+        code.add(new LC3ADD(CODE.CONST1, CODE.CONST0, 1));
+        LC3label cont = code.newLabel();
+        LC3label data = code.newLabel();
+        LC3label heap = code.newLabel();
+        code.commentline(" set SFP and HP ");
+        code.add( new LC3LD(CODE.SFP, data));
+        code.add( new LC3LD(CODE.HP, heap));
+        code.add( new LC3BR(cont) );
+        code.commentline(" data for SFP and HP");
+        code.add(data);
+        code.add( new LC3int(code.getFramestack()) );
+        code.add(heap);
+        code.add( new LC3int(code.getHeap()));
+        String[] args = Compiler.getArguments();
+        if (args.length>0) {
+            code.commentline(" arguments to main");
+            code.commentline(" string contents");
+            LC3label[] contlabs = new LC3label[args.length];
+            LC3label[] strlabs = new LC3label[args.length];
+            for (int i=0;i<args.length;i++) {
+                contlabs[i] = code.newLabel();
+                code.add( contlabs[i] );
+                code.add( new LC3string(args[i]));
+            }
+            code.commentline(" strings");
+            for (int i=0;i<args.length;i++) {
+                strlabs[i] = code.newLabel();
+                code.add( strlabs[i]);
+                code.add( new LC3labeldata(contlabs[i]) );
+                code.add( new LC3int(args[i].length()+1));    
+            }
+            code.commentline(" args array");
+            code.add(code.arguments);
+            code.add(new LC3int(args.length));
+            for (int i=0;i<args.length;i++) {
+                code.add( new LC3labeldata(strlabs[i]));
+            }
+        }
+        code.comment("Virtual Method Tables");
+        
+        for (MJClass c : e.getClasses()) {
+            LC3label vmtlabel = c.getVMTlabel();
+            LC3label actlabel = code.newLabel();
+            
+            code.comment("BEGIN " + c.getName()+" virtual method table");
+            code.add(vmtlabel);
+            code.add( new LC3labeldata(actlabel));
+            code.add(actlabel);
+            if (c.getMethodTable().size()==0) {
+                code.comment("DUMMY value for empty VMT");
+                code.add(new LC3int(0));
+            }
+            for (int idx=0; idx<c.getMethodTable().size(); idx++) {
+                MJMethod m = c.getMethodTable().get(idx);
+                code.commentline(" "+idx+" "+m.getName());
+                code.add( new LC3labeldata(m.getLabel()));
+            }
+            code.comment("END " + c.getName()+" virtual method table");
+        }
+        code.add(cont);
+    }
 }
